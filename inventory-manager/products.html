@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Quản lý sản phẩm</h1>
+</header>
+<nav>
+    <a href="index.html">Trang chính</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="categories.html">Danh mục</a>
+    <a href="suppliers.html">Nhà cung cấp</a>
+    <a href="import.html">Nhập kho</a>
+    <a href="export.html">Xuất kho</a>
+    <a href="reports.html">Báo cáo</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>Thêm / Sửa sản phẩm</h2>
+        <form id="productForm">
+            <input type="hidden" id="productId">
+            <label for="productCode">Mã sản phẩm</label>
+            <input type="text" id="productCode" required>
+
+            <label for="productName">Tên sản phẩm</label>
+            <input type="text" id="productName" required>
+
+            <label for="categoryId">Danh mục</label>
+            <select id="categoryId" required></select>
+
+            <label for="supplierId">Nhà cung cấp</label>
+            <select id="supplierId" required></select>
+
+            <label for="price">Giá</label>
+            <input type="number" id="price" min="0" step="1000" required>
+
+            <label for="quantity">Số lượng</label>
+            <input type="number" id="quantity" min="0" required>
+
+            <label for="description">Mô tả</label>
+            <textarea id="description" rows="3"></textarea>
+
+            <button type="submit">Lưu</button>
+            <button type="button" class="secondary" onclick="resetForm()">Làm mới</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Tìm kiếm & Lọc</h2>
+        <div class="summary-grid">
+            <div>
+                <label for="searchCode">Tìm theo mã</label>
+                <input type="text" id="searchCode" placeholder="Nhập mã sản phẩm">
+            </div>
+            <div>
+                <label for="searchName">Tìm theo tên</label>
+                <input type="text" id="searchName" placeholder="Nhập tên sản phẩm">
+            </div>
+            <div>
+                <label for="filterCategory">Lọc danh mục</label>
+                <select id="filterCategory"></select>
+            </div>
+            <div>
+                <label for="filterSupplier">Lọc nhà cung cấp</label>
+                <select id="filterSupplier"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Danh sách sản phẩm</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Danh mục</th>
+                        <th>Nhà cung cấp</th>
+                        <th>Giá</th>
+                        <th>Tồn</th>
+                        <th>Mô tả</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="productTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

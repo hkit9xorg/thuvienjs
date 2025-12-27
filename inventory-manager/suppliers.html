@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhà cung cấp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Quản lý nhà cung cấp</h1>
+</header>
+<nav>
+    <a href="index.html">Trang chính</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="categories.html">Danh mục</a>
+    <a href="suppliers.html">Nhà cung cấp</a>
+    <a href="import.html">Nhập kho</a>
+    <a href="export.html">Xuất kho</a>
+    <a href="reports.html">Báo cáo</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>Thêm / Sửa nhà cung cấp</h2>
+        <form id="supplierForm">
+            <input type="hidden" id="supplierId">
+            <label for="supplierCode">Mã nhà cung cấp</label>
+            <input type="text" id="supplierCode" required>
+
+            <label for="supplierName">Tên nhà cung cấp</label>
+            <input type="text" id="supplierName" required>
+
+            <label for="phone">Điện thoại</label>
+            <input type="text" id="phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" required>
+
+            <button type="submit">Lưu</button>
+            <button type="button" class="secondary" onclick="resetSupplierForm()">Làm mới</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Danh sách nhà cung cấp</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                        <th>Địa chỉ</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="supplierTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/suppliers.js"></script>
+</body>
+</html>
