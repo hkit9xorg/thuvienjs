@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Quản lý sinh viên</h1>
+</header>
+<main>
+    <section class="nav-links">
+        <a href="index.html">Trang chính</a>
+        <a href="classes.html">Danh mục lớp</a>
+        <a href="teachers.html">Danh mục giáo viên</a>
+    </section>
+
+    <section>
+        <h2>Thêm / Sửa sinh viên</h2>
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+            <label for="studentCode">Mã sinh viên</label>
+            <input type="text" id="studentCode" required>
+
+            <label for="fullName">Họ và tên</label>
+            <input type="text" id="fullName" required>
+
+            <label for="dateOfBirth">Ngày sinh</label>
+            <input type="date" id="dateOfBirth" required>
+
+            <label for="gender">Giới tính</label>
+            <select id="gender" required>
+                <option value="">--Chọn--</option>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác</option>
+            </select>
+
+            <label for="phone">Điện thoại</label>
+            <input type="text" id="phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" required>
+
+            <label for="classId">Lớp</label>
+            <select id="classId" required></select>
+
+            <label for="teacherId">Giáo viên quản lý</label>
+            <select id="teacherId" required></select>
+
+            <button type="submit" id="btnSave">Lưu</button>
+            <button type="button" id="btnReset">Nhập mới</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Tìm kiếm và lọc</h2>
+        <div class="filter-group">
+            <div class="field">
+                <label for="searchCode">Tìm theo mã</label>
+                <input type="text" id="searchCode" placeholder="Mã sinh viên">
+            </div>
+            <div class="field">
+                <label for="searchName">Tìm theo họ tên</label>
+                <input type="text" id="searchName" placeholder="Họ và tên">
+            </div>
+            <div class="field">
+                <label for="filterClass">Lọc theo lớp</label>
+                <select id="filterClass">
+                    <option value="">Tất cả</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="filterTeacher">Lọc theo giáo viên</label>
+                <select id="filterTeacher">
+                    <option value="">Tất cả</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Danh sách sinh viên</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã SV</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Điện thoại</th>
+                    <th>Email</th>
+                    <th>Địa chỉ</th>
+                    <th>Lớp</th>
+                    <th>Giáo viên</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/students.js"></script>
+</body>
+</html>
