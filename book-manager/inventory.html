@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý kho</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/storage.js"></script>
+  <script src="js/inventory.js"></script>
+</head>
+<body>
+  <header><h1>Quản lý kho</h1></header>
+  <nav>
+    <a href="index.html">Trang chính</a>
+    <a href="books.html">Sách</a>
+    <a href="categories.html">Thể loại</a>
+    <a href="authors.html">Tác giả</a>
+    <a href="users.html">Người dùng</a>
+    <a href="borrow.html">Mượn/Trả</a>
+    <a href="inventory.html">Kho</a>
+    <a href="reports.html">Báo cáo</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Tồn kho</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Tên sách</th><th>Thể loại</th><th>Số lượng</th></tr></thead>
+        <tbody id="inventoryBody"></tbody>
+      </table>
+      <p class="small">Mượn/Trả sách sẽ cập nhật tồn kho ngay.</p>
+    </section>
+  </main>
+</body>
+</html>

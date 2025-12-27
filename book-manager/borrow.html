@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mượn / Trả sách</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/storage.js"></script>
+  <script src="js/borrow.js"></script>
+</head>
+<body>
+  <header><h1>Mượn / Trả sách</h1></header>
+  <nav>
+    <a href="index.html">Trang chính</a>
+    <a href="books.html">Sách</a>
+    <a href="categories.html">Thể loại</a>
+    <a href="authors.html">Tác giả</a>
+    <a href="users.html">Người dùng</a>
+    <a href="borrow.html">Mượn/Trả</a>
+    <a href="inventory.html">Kho</a>
+    <a href="reports.html">Báo cáo</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Mượn sách</h2>
+      <form id="borrowForm">
+        <div>
+          <label>Chọn sách</label>
+          <select id="borrowBook"></select>
+        </div>
+        <div>
+          <label>Người mượn</label>
+          <select id="borrowUser"></select>
+        </div>
+        <button type="submit">Mượn</button>
+      </form>
+    </section>
+    <section>
+      <h2>Trả sách</h2>
+      <form id="returnForm">
+        <div>
+          <label>Chọn sách</label>
+          <select id="returnBook"></select>
+        </div>
+        <div>
+          <label>Người trả</label>
+          <select id="returnUser"></select>
+        </div>
+        <button type="submit">Trả</button>
+      </form>
+    </section>
+    <section>
+      <h2>Lịch sử mượn/trả</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Sách</th><th>User</th><th>Loại</th><th>Thời gian</th></tr></thead>
+        <tbody id="borrowBody"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

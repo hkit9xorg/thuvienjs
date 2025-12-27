@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý thể loại</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/storage.js"></script>
+  <script src="js/categories.js"></script>
+</head>
+<body>
+  <header><h1>Quản lý thể loại</h1></header>
+  <nav>
+    <a href="index.html">Trang chính</a>
+    <a href="books.html">Sách</a>
+    <a href="categories.html">Thể loại</a>
+    <a href="authors.html">Tác giả</a>
+    <a href="users.html">Người dùng</a>
+    <a href="borrow.html">Mượn/Trả</a>
+    <a href="inventory.html">Kho</a>
+    <a href="reports.html">Báo cáo</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Thêm / Sửa thể loại</h2>
+      <form id="categoryForm">
+        <input type="hidden" id="categoryId">
+        <div>
+          <label>Tên thể loại</label>
+          <input id="categoryName" required>
+        </div>
+        <button type="submit">Lưu</button>
+      </form>
+    </section>
+    <section>
+      <h2>Danh sách thể loại</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Tên</th><th>Hành động</th></tr></thead>
+        <tbody id="categoryBody"></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
