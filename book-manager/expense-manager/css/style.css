@@ -1,0 +1,126 @@
+/* Style cơ bản cho ứng dụng quản lý chi tiêu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f6fa;
+    color: #333;
+}
+
+header {
+    background: #2d98da;
+    color: #fff;
+    padding: 16px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+nav {
+    margin-top: 8px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #2d98da;
+}
+
+form label {
+    display: block;
+    margin-top: 8px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: none;
+    background: #2d98da;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button.secondary {
+    background: #b2bec3;
+    color: #2d3436;
+    margin-left: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+table th, table td {
+    border: 1px solid #e1e1e1;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background: #f0f4f7;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #dfe6e9;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.info-box {
+    display: inline-block;
+    padding: 10px 12px;
+    background: #ecf0f1;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+}
+
+.alert {
+    padding: 10px;
+    background: #ffeaa7;
+    border: 1px solid #fdcb6e;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+button.link {
+    background: #d63031;
+}
+
+.text-right {
+    text-align: right;
+}

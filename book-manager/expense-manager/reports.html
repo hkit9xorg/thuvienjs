@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Báo cáo chi tiêu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Thống kê & Báo cáo</h1>
+    <nav>
+        <a href="index.html">Trang chính</a>
+        <a href="expenses.html">Khoản chi</a>
+        <a href="categories.html">Danh mục</a>
+        <a href="reports.html">Báo cáo</a>
+    </nav>
+</header>
+<div class="container">
+    <section>
+        <h2>Tổng quan</h2>
+        <div id="report-overview"></div>
+    </section>
+
+    <section>
+        <h2>Tổng chi theo danh mục</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Danh mục</th>
+                    <th>Số tiền</th>
+                </tr>
+            </thead>
+            <tbody id="report-category"></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Chi tiêu theo ngày</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ngày</th>
+                    <th>Số tiền</th>
+                </tr>
+            </thead>
+            <tbody id="report-date"></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Chi tiêu theo tháng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tháng</th>
+                    <th>Số tiền</th>
+                </tr>
+            </thead>
+            <tbody id="report-month"></tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Khoản chi lớn nhất</h2>
+        <div id="report-max"></div>
+    </section>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/reports.js"></script>
+</body>
+</html>
