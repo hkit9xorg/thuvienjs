@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Hệ thống quản lý kho</h1>
+</header>
+<nav>
+    <a href="index.html">Trang chính</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="categories.html">Danh mục</a>
+    <a href="suppliers.html">Nhà cung cấp</a>
+    <a href="import.html">Nhập kho</a>
+    <a href="export.html">Xuất kho</a>
+    <a href="reports.html">Báo cáo</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>Khởi tạo dữ liệu</h2>
+        <p>Ấn nút bên dưới để khởi tạo dữ liệu mẫu (chỉ thực hiện khi kho trống).</p>
+        <button onclick="initializeData()">Khởi tạo dữ liệu</button>
+    </div>
+    <div class="card">
+        <h2>Hướng dẫn nhanh</h2>
+        <ul>
+            <li>Quản lý danh mục và nhà cung cấp trước khi thêm sản phẩm.</li>
+            <li>Nhập kho và xuất kho sẽ cập nhật tồn và lưu lịch sử.</li>
+            <li>Các thao tác đều được ghi log để thuận tiện theo dõi.</li>
+        </ul>
+    </div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/init.js"></script>
+</body>
+</html>

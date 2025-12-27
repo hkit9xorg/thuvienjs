@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Danh mục sản phẩm</h1>
+</header>
+<nav>
+    <a href="index.html">Trang chính</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="categories.html">Danh mục</a>
+    <a href="suppliers.html">Nhà cung cấp</a>
+    <a href="import.html">Nhập kho</a>
+    <a href="export.html">Xuất kho</a>
+    <a href="reports.html">Báo cáo</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>Thêm / Sửa danh mục</h2>
+        <form id="categoryForm">
+            <input type="hidden" id="categoryId">
+            <label for="categoryCode">Mã danh mục</label>
+            <input type="text" id="categoryCode" required>
+
+            <label for="categoryName">Tên danh mục</label>
+            <input type="text" id="categoryName" required>
+
+            <button type="submit">Lưu</button>
+            <button type="button" class="secondary" onclick="resetCategoryForm()">Làm mới</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Danh sách danh mục</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="categoryTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/categories.js"></script>
+</body>
+</html>

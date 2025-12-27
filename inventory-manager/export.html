@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xuất kho</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Xuất kho</h1>
+</header>
+<nav>
+    <a href="index.html">Trang chính</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="categories.html">Danh mục</a>
+    <a href="suppliers.html">Nhà cung cấp</a>
+    <a href="import.html">Nhập kho</a>
+    <a href="export.html">Xuất kho</a>
+    <a href="reports.html">Báo cáo</a>
+</nav>
+<div class="container">
+    <div class="card">
+        <h2>Thêm lượt xuất</h2>
+        <form id="exportForm">
+            <label for="exportProduct">Chọn sản phẩm</label>
+            <select id="exportProduct" required></select>
+
+            <label for="exportQuantity">Số lượng</label>
+            <input type="number" id="exportQuantity" min="1" required>
+
+            <label for="exportNote">Ghi chú</label>
+            <input type="text" id="exportNote" placeholder="Ghi chú thêm (không bắt buộc)">
+
+            <button type="submit">Xuất kho</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Lịch sử xuất</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Thời gian</th>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody id="exportTable"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/storage.js"></script>
+<script src="js/export.js"></script>
+</body>
+</html>
