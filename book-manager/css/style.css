@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f7fb; color: #333; }
+header { background: #2d6cdf; color: #fff; padding: 16px; text-align: center; }
+nav { background: #1f4aa3; padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+nav a { color: #fff; text-decoration: none; background: rgba(255,255,255,0.2); padding: 8px 12px; border-radius: 4px; }
+nav a:hover { background: rgba(255,255,255,0.35); }
+main { padding: 16px; max-width: 1100px; margin: 0 auto; }
+section { background: #fff; padding: 16px; margin-bottom: 16px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+form { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 12px; }
+label { font-weight: bold; }
+input, select, button { padding: 8px; border: 1px solid #cfd5e3; border-radius: 4px; }
+button { background: #2d6cdf; color: #fff; cursor: pointer; }
+button:hover { background: #1f4aa3; }
+table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+th, td { border: 1px solid #e2e5ec; padding: 8px; text-align: left; }
+th { background: #f0f2f7; }
+.status-badge { display: inline-block; padding: 4px 8px; border-radius: 12px; background: #e8eefc; color: #1f4aa3; font-size: 12px; }
+.alert { color: #c0392b; font-weight: bold; }
+.flex { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.small { font-size: 12px; color: #666; }
+.notice { background: #fff2d5; padding: 8px; border-radius: 4px; border: 1px solid #f0d48a; }

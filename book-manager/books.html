@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý sách</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/storage.js"></script>
+  <script src="js/books.js"></script>
+</head>
+<body>
+  <header><h1>Quản lý sách</h1></header>
+  <nav>
+    <a href="index.html">Trang chính</a>
+    <a href="books.html">Sách</a>
+    <a href="categories.html">Thể loại</a>
+    <a href="authors.html">Tác giả</a>
+    <a href="users.html">Người dùng</a>
+    <a href="borrow.html">Mượn/Trả</a>
+    <a href="inventory.html">Kho</a>
+    <a href="reports.html">Báo cáo</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Thêm / Sửa sách</h2>
+      <form id="bookForm">
+        <input type="hidden" id="bookId">
+        <div>
+          <label>Tiêu đề</label>
+          <input id="bookTitle" required>
+        </div>
+        <div>
+          <label>Tác giả</label>
+          <select id="bookAuthor"></select>
+        </div>
+        <div>
+          <label>Thể loại</label>
+          <select id="bookCategory"></select>
+        </div>
+        <div>
+          <label>Giá</label>
+          <input id="bookPrice" type="number" min="0" step="1" value="0">
+        </div>
+        <div>
+          <label>Số lượng</label>
+          <input id="bookQuantity" type="number" min="0" step="1" value="1">
+        </div>
+        <button type="submit">Lưu</button>
+      </form>
+    </section>
+    <section>
+      <h2>Danh sách sách</h2>
+      <div class="flex">
+        <input id="searchTitle" placeholder="Tìm theo tên">
+        <select id="filterCategory"></select>
+      </div>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Tiêu đề</th><th>Tác giả</th><th>Thể loại</th><th>Giá</th><th>Tồn kho</th><th>Hành động</th></tr>
+        </thead>
+        <tbody id="bookBody"></tbody>
+      </table>
+      <p class="small">Chỉ admin (current user) mới được xóa.</p>
+    </section>
+  </main>
+</body>
+</html>
