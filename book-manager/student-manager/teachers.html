@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục giáo viên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Danh mục giáo viên</h1>
+</header>
+<main>
+    <section class="nav-links">
+        <a href="index.html">Trang chính</a>
+        <a href="students.html">Quản lý sinh viên</a>
+        <a href="classes.html">Danh mục lớp</a>
+    </section>
+
+    <section>
+        <h2>Thêm / Sửa giáo viên</h2>
+        <form id="teacherForm">
+            <input type="hidden" id="teacherId">
+            <label for="teacherCode">Mã giáo viên</label>
+            <input type="text" id="teacherCode" required>
+
+            <label for="teacherName">Họ và tên</label>
+            <input type="text" id="teacherName" required>
+
+            <label for="teacherPhone">Điện thoại</label>
+            <input type="text" id="teacherPhone" required>
+
+            <label for="teacherEmail">Email</label>
+            <input type="email" id="teacherEmail" required>
+
+            <button type="submit" id="btnSaveTeacher">Lưu</button>
+            <button type="button" id="btnResetTeacher">Nhập mới</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Danh sách giáo viên</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã GV</th>
+                    <th>Họ tên</th>
+                    <th>Điện thoại</th>
+                    <th>Email</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="teacherTableBody"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/teachers.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục lớp</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Danh mục lớp</h1>
+</header>
+<main>
+    <section class="nav-links">
+        <a href="index.html">Trang chính</a>
+        <a href="students.html">Quản lý sinh viên</a>
+        <a href="teachers.html">Danh mục giáo viên</a>
+    </section>
+
+    <section>
+        <h2>Thêm / Sửa lớp</h2>
+        <form id="classForm">
+            <input type="hidden" id="classId">
+            <label for="classCode">Mã lớp</label>
+            <input type="text" id="classCode" required>
+
+            <label for="className">Tên lớp</label>
+            <input type="text" id="className" required>
+
+            <button type="submit" id="btnSaveClass">Lưu</button>
+            <button type="button" id="btnResetClass">Nhập mới</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Danh sách lớp</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã lớp</th>
+                    <th>Tên lớp</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="classTableBody"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/classes.js"></script>
+</body>
+</html>
