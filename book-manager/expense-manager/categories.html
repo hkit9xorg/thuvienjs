@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh mục chi tiêu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Danh mục chi tiêu</h1>
+    <nav>
+        <a href="index.html">Trang chính</a>
+        <a href="expenses.html">Khoản chi</a>
+        <a href="categories.html">Danh mục</a>
+        <a href="reports.html">Báo cáo</a>
+    </nav>
+</header>
+<div class="container">
+    <section>
+        <h2>Thêm / Sửa danh mục</h2>
+        <form id="category-form">
+            <input type="hidden" id="category-id">
+            <label for="category-name">Tên danh mục</label>
+            <input type="text" id="category-name" required>
+            <button type="submit" id="save-category">Lưu</button>
+            <button type="button" class="secondary" id="reset-category">Làm mới</button>
+        </form>
+        <div class="alert">Lưu ý: Không thể xóa danh mục đang được sử dụng bởi khoản chi.</div>
+    </section>
+
+    <section>
+        <h2>Danh sách danh mục</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tên danh mục</th>
+                    <th class="text-right">Tác vụ</th>
+                </tr>
+            </thead>
+            <tbody id="category-table"></tbody>
+        </table>
+    </section>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/categories.js"></script>
+</body>
+</html>
