@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Từ điển Anh - Việt</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Anh - Việt Dictionary</div>
+    <nav>
+      <a href="./index.html" class="active">Tra từ</a>
+      <a href="./words.html">Từ vựng</a>
+      <a href="./categories.html">Loại từ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Tra cứu nhanh</h2>
+      <p class="small-text">Nhập từ tiếng Anh để xem nghĩa tiếng Việt (dữ liệu lưu trong LocalStorage, không cần mạng).</p>
+      <form id="search-form" class="flex" style="align-items: flex-start;">
+        <div style="flex: 1; min-width: 240px;">
+          <label for="keyword">Từ cần tra</label>
+          <input type="text" id="keyword" placeholder="Ví dụ: apple, run, beautiful..." required />
+        </div>
+        <div style="padding-top: 28px;">
+          <button type="submit" class="primary">Tra cứu</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Kết quả</h2>
+      <div id="results" class="card-grid">
+        <p class="empty">Hãy nhập từ tiếng Anh để bắt đầu tra cứu.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Chạy trực tiếp bằng file HTML, dữ liệu lưu cục bộ trên trình duyệt.</footer>
+
+  <script src="./js/storage.js"></script>
+  <script src="./js/init.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loại từ</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Anh - Việt Dictionary</div>
+    <nav>
+      <a href="./index.html">Tra từ</a>
+      <a href="./words.html">Từ vựng</a>
+      <a href="./categories.html" class="active">Loại từ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="flex" style="justify-content: space-between; align-items: center;">
+        <div>
+          <h2 id="category-title">Thêm loại từ</h2>
+          <p class="small-text">Dữ liệu được lưu trong LocalStorage. Không cần kết nối mạng.</p>
+        </div>
+        <button id="category-reset" class="secondary">Làm mới</button>
+      </div>
+      <form id="category-form">
+        <label for="category-name">Tên loại từ</label>
+        <input type="text" id="category-name" placeholder="Ví dụ: Pronoun (Đại từ)" required />
+
+        <button type="submit" id="category-submit" class="primary">Thêm mới</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Danh sách loại từ</h2>
+      <table class="table" id="categories-table">
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Mã</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="categories-body"></tbody>
+      </table>
+      <p class="small-text">Không thể xóa loại từ đang được dùng trong danh sách từ vựng.</p>
+    </section>
+  </main>
+
+  <footer>Quản lý loại từ ngay trên trình duyệt, lưu bằng LocalStorage.</footer>
+
+  <script src="./js/storage.js"></script>
+  <script src="./js/init.js"></script>
+  <script src="./js/categories.js"></script>
+</body>
+</html>
